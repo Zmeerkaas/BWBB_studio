@@ -30,17 +30,16 @@
     --radius-lg: 28px;
     --radius-md: 18px;
     --radius-sm: 12px;
-    --maxw: 1120px;
+    --maxw: 1200px;
     --shadow: 0 14px 34px rgba(38, 32, 26, 0.10);
     --shadow-sm: 0 6px 16px rgba(38, 32, 26, 0.08);
   }
 
-  @media (min-width: 1280px) { :root { --maxw: 1240px; } }
-  @media (min-width: 1560px) { :root { --maxw: 1380px; } }
-  @media (min-width: 1900px) { :root { --maxw: 1520px; } }
+  @media (min-width: 1560px) { :root { --maxw: 1320px; } }
+  @media (min-width: 1900px) { :root { --maxw: 1440px; } }
 
   * { box-sizing: border-box; min-width: 0; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; margin: 0; padding: 0; width: 100%; }
   html, body { overflow-x: hidden; }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
@@ -49,6 +48,8 @@
 
   body {
     margin: 0;
+    padding: 0;
+    width: 100%;
     font-family: 'Manrope', Arial, sans-serif;
     color: var(--ink);
     background: var(--cream);
@@ -70,21 +71,28 @@
   img, svg { display: block; max-width: 100%; }
 
   .container {
-    width: min(var(--maxw), 92vw);
+    width: 100%;
+    max-width: var(--maxw);
     margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  @media (min-width: 640px) {
+    .container { padding: 0 32px; }
   }
 
   .skip-link {
     position: absolute;
-    left: -999px;
-    top: 0;
+    left: 12px;
+    top: -60px;
     background: var(--navy);
     color: white;
     padding: 10px 16px;
-    border-radius: 0 0 8px 0;
+    border-radius: 0 0 8px 8px;
     z-index: 100;
+    transition: top 0.15s ease;
   }
-  .skip-link:focus { left: 0; }
+  .skip-link:focus { top: 0; }
 
   a:focus-visible,
   button:focus-visible,
@@ -588,22 +596,20 @@
     margin-top: 36px;
     padding-top: 20px;
     border-top: 1px solid rgba(255,255,255,0.14);
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     color: rgba(255,255,255,0.6);
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    gap: 8px;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
   }
 
-  @media (min-width: 640px) {
-    .footer-bottom {
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      text-align: inherit;
-    }
+  .footer-bottom span:first-child { text-align: left; }
+  .footer-bottom span:last-child { text-align: right; }
+
+  @media (max-width: 420px) {
+    .footer-bottom { font-size: 0.74rem; gap: 10px; }
   }
 </style>
 </head>
