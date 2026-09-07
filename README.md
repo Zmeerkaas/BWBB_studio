@@ -937,8 +937,8 @@
     <div>
       <h4>Support</h4>
       <ul>
-        <li><a href="privacy.html">Privacy Policy</a></li>
-        <li><a href="mailto:hello@weekendwarriorsapp.com">hello@weekendwarriorsapp.com</a></li>
+        <li><a href="[privacy.html](https://docs.google.com/document/d/11vJCnAG37Z6YQKx41V-x_h5Abil_VlyKp0LTUG6FX0E/edit?usp=sharing)">Privacy Policy</a></li>
+        <li><a href="mailto:bwbbstudio@gmail.com">bwbbstudio@gmail.com</a></li>
       </ul>
     </div>
   </div>
