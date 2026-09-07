@@ -151,18 +151,20 @@
   .menu {
     display: none;
     list-style: none;
-    gap: 6px;
+    gap: 2px;
     padding: 0;
     margin: 0;
+    flex-wrap: nowrap;
   }
 
   .menu a {
     text-decoration: none;
     font-weight: 700;
-    font-size: 0.92rem;
-    padding: 8px 14px;
+    font-size: 0.86rem;
+    padding: 8px 12px;
     border-radius: 999px;
     color: var(--navy);
+    white-space: nowrap;
     transition: background 0.15s ease, color 0.15s ease;
   }
 
@@ -172,7 +174,7 @@
     display: none;
   }
 
-  @media (min-width: 860px) {
+  @media (min-width: 1120px) {
     .menu { display: flex; }
     .nav-cta {
       display: inline-flex;
@@ -184,6 +186,7 @@
       padding: 10px 20px;
       border-radius: 999px;
       text-decoration: none;
+      white-space: nowrap;
       transition: background 0.15s ease;
     }
     .nav-cta:hover { background: var(--navy-light); }
@@ -602,7 +605,12 @@
     padding: 44px 0 28px;
     margin-top: 24px;
     flex-shrink: 0;
-    width: 100%;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
   }
 
   .footer-grid {
