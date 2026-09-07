@@ -39,7 +39,7 @@
   @media (min-width: 1900px) { :root { --maxw: 1440px; } }
 
   * { box-sizing: border-box; min-width: 0; }
-  html { scroll-behavior: smooth; margin: 0; padding: 0; width: 100%; }
+  html { scroll-behavior: smooth; margin: 0; padding: 0; width: 100%; background: var(--navy); }
   html, body { overflow-x: hidden; }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
@@ -503,6 +503,43 @@
   .step-body h3 { font-size: 1.08rem; margin-bottom: 4px; }
   .step-body p { color: var(--muted); font-size: 0.98rem; }
 
+  /* ---------- Support panel ---------- */
+  .support-panel {
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    padding: 44px 32px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .support-panel .icon-badge {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: var(--cream);
+    color: var(--coral);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+  }
+
+  .support-panel h2 { font-size: clamp(1.4rem, 2.8vw, 1.7rem); }
+
+  .support-panel p {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 1.02rem;
+    max-width: 44ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .support-panel .store-btn { margin-top: 24px; background: var(--coral); }
+  .support-panel .store-btn:hover { background: var(--coral-dark); }
+
   /* ---------- Download banner ---------- */
   .download-banner {
     background: linear-gradient(135deg, var(--coral), var(--gold));
@@ -565,9 +602,7 @@
     padding: 44px 0 28px;
     margin-top: 24px;
     flex-shrink: 0;
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
+    width: 100%;
   }
 
   .footer-grid {
@@ -661,6 +696,7 @@
       <li><a href="#features">Why you'll love it</a></li>
       <li><a href="#games">Games</a></li>
       <li><a href="#how">How it works</a></li>
+      <li><a href="#support">Support us</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -872,6 +908,22 @@
           </div>
         </li>
       </ol>
+    </div>
+  </section>
+
+  <section id="support">
+    <div class="container">
+      <div class="support-panel">
+        <div class="icon-badge" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path></svg>
+        </div>
+        <h2>Support the project</h2>
+        <p>Weekend Warriors is a student passion project. If you enjoy it, consider supporting development.</p>
+        <a class="store-btn" href="https://www.paypal.com/paypalme/JSmeerkaas" target="_blank" rel="noopener noreferrer">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.5 2.5h6.7c3 0 5 1.9 4.5 4.9-.6 3.7-3 5.6-6.6 5.6H9.8l-1 6.2H5.4L7.5 2.5zm2.7 8.2h1.9c1.9 0 3-.9 3.3-2.8.3-1.8-.6-2.6-2.4-2.6h-1.8l-1 5.4z"/></svg>
+          Doneer via PayPal
+        </a>
+      </div>
     </div>
   </section>
 
