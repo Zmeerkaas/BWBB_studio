@@ -1005,11 +1005,13 @@
         </span>
         Weekend Warriors
       </div>
+    </div>
+
+    <div>
       <p style="margin-top: 14px; max-width: 34ch; color: rgba(255,255,255,0.72); font-size: 0.94rem;">
         The party game app that gets friend groups off their feeds and into the room.
       </p>
     </div>
-
     <div>
       <h4>Explore</h4>
       <ul>
