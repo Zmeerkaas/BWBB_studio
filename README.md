@@ -54,7 +54,12 @@
     color: var(--ink);
     background: var(--cream);
     line-height: 1.55;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
+
+  main { flex: 1 0 auto; }
 
   h1, h2, h3 {
     font-family: 'Fredoka', 'Manrope', Arial, sans-serif;
@@ -559,6 +564,10 @@
     color: rgba(255,255,255,0.85);
     padding: 44px 0 28px;
     margin-top: 24px;
+    flex-shrink: 0;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
   }
 
   .footer-grid {
@@ -591,6 +600,23 @@
   footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
   footer a { text-decoration: none; color: rgba(255,255,255,0.78); font-size: 0.94rem; }
   footer a:hover { color: white; text-decoration: underline; }
+
+  .donate-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 14px;
+    background: var(--coral);
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.92rem;
+    padding: 11px 20px;
+    border-radius: 999px;
+    transition: background 0.15s ease, transform 0.15s ease;
+  }
+  .donate-btn:hover { background: var(--coral-dark); transform: translateY(-2px); }
 
   .footer-bottom {
     margin-top: 36px;
@@ -937,9 +963,13 @@
     <div>
       <h4>Support</h4>
       <ul>
-        <li><a href="[privacy.html](https://docs.google.com/document/d/11vJCnAG37Z6YQKx41V-x_h5Abil_VlyKp0LTUG6FX0E/edit?usp=sharing)">Privacy Policy</a></li>
+        <li><a href="https://docs.google.com/document/d/11vJCnAG37Z6YQKx41V-x_h5Abil_VlyKp0LTUG6FX0E/edit?usp=sharing">Privacy Policy</a></li>
         <li><a href="mailto:bwbbstudio@gmail.com">bwbbstudio@gmail.com</a></li>
       </ul>
+      <a class="donate-btn" href="https://www.paypal.com/paypalme/JSmeerkaas" target="_blank" rel="noopener noreferrer">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path></svg>
+        Doneer via PayPal
+      </a>
     </div>
   </div>
 
